@@ -1,12 +1,3 @@
-# NLP 面无不过
-
-> 介绍：本项目是作者们根据个人面试和经验总结出的自然语言处理(NLP)面试准备的学习笔记与资料，该资料目前包含 自然语言处理各领域的 面试题积累。
-> 
-<img src="img/微信截图_20230918094559.png" width="50%" >
->  NLP 面无不过 面试交流群 (注：人满 可 添加 小编wx：yzyykm666 加群！)
-
-<img src="img/微信截图_20210301212242.png" width="50%" >
-
 ## 四、NLP 学习算法 常见面试篇
 
 #### 4.1 信息抽取 常见面试篇
@@ -288,46 +279,47 @@
 
 #### 4.3 Bert 常见面试篇
 
-- [Bert 常见面试篇](https://articles.zsxq.com/id_0ceqw3u9o2i5.html) 
-  - 一、动机篇
-    - 1.1 【演变史】one-hot 存在问题?
-    - 1.2【演变史】wordvec 存在问题?
-    - 1.3【演变史】fastText 存在问题?
-    - 1.4【演变史】elmo 存在问题?
-  - 二、Bert 篇
-    - 2.1 Bert 介绍篇
-      - 2.1.1【BERT】Bert 是什么?
-      - 2.1.2【BERT】Bert 三个关键点？
-    - 2.2 Bert 输入输出表征篇
-      - 2.2.1 【BERT】Bert 输入输出表征长啥样？
-    - 2.3 【BERT】Bert 预训练篇
-      - 2.3.1 【BERT】Bert 预训练任务介绍
-      - 2.3.2 【BERT】Bert 预训练任务 之 Masked LM 篇
-        - 2.3.2.1 【BERT】 Bert 为什么需要预训练任务 Masked LM ？
-        - 2.3.2.2 【BERT】 Bert 预训练任务 Masked LM 怎么做？
-        - 2.3.2.3 【BERT】 Bert 预训练任务 Masked LM 存在问题？
-        - 2.3.2.4 【BERT】 预训练和微调之间的不匹配的解决方法？
-      - 2.3.3 【BERT】Bert 预训练任务 之 Next Sentence Prediction 篇
-        - 2.3.3.1 【BERT】Bert 为什么需要预训练任务 Next Sentence Prediction ？
-        - 2.3.3.2 【BERT】 Bert 预训练任务 Next Sentence Prediction 怎么做？
-    - 2.4 【BERT】 fine-turning 篇？
-      - 2.4.1 【BERT】为什么 Bert 需要 fine-turning？
-      - 2.4.2 【BERT】 Bert 如何 fine-turning？
-    - 2.5 【BERT】 Bert 损失函数篇？
-      - 2.5.1 【BERT】BERT的两个预训练任务对应的损失函数是什么(用公式形式展示)？
-  - 三、 对比篇？
-    - 3.1 【对比】多义词问题是什么？
-    - 3.2 【对比】word2vec 为什么解决不了多义词问题？
-    - 3.3 【对比】GPT和BERT有什么不同？
-    - 3.4 【对比】为什么 elmo、GPT、Bert能够解决多义词问题？（以 elmo 为例）
-
-> [点击查看答案](https://articles.zsxq.com/id_0ceqw3u9o2i5.html)
-
-- [【关于 Bert 源码解析I 之 主体篇】那些你不知道的事](https://articles.zsxq.com/id_918gk4sl2l8b.html)
-- [【关于 Bert 源码解析II 之 预训练篇】那些你不知道的事](https://articles.zsxq.com/id_m1pcu7g25bd6.html)
-- [【关于 Bert 源码解析III 之 微调篇】那些你不知道的事](https://articles.zsxq.com/id_uxcwvhqvvbes.html)
-- [【关于 Bert 源码解析IV 之 句向量生成篇】那些你不知道的事](https://articles.zsxq.com/id_1ccw29hl80o8.html)
-- [【关于 Bert 源码解析V 之 文本相似度篇】那些你不知道的事](https://articles.zsxq.com/id_vauhnwe9m7aj.html)
+- 一、动机篇
+  - 1.1 one-hot 存在问题?
+    - 维度高：词汇量大时，向量维度非常高，导致存储和计算成本大。
+    - 稀疏性：向量中大部分都是 0，表示效率低。
+    - 无法表示语义相似性：不同词的向量完全独立，无法反映词语之间的关系或相似度。
+      
+  - 1.2 wordvec 存在问题?
+    - CBOW（Continuous Bag of Words）和Skip-gram。CBOW 根据上下文预测目标词，而 Skip-gram 则是根据目标词预测上下文。
+    - 静态词向量：每个词的表示是固定的，无法根据不同上下文调整，无法处理多义词。
+    - 无法捕捉长距离依赖：只能表示局部上下文的词语关系，忽略了长距离的依赖。
+    - 缺乏深层语义理解：Word2Vec 是浅层模型，不能理解复杂语法或深层语义。
+      
+  - 1.3 fastText 存在问题?
+  - 1.4 elmo 存在问题?
+    
+- 二、Bert 篇
+  - 2.1 Bert 介绍篇
+    - 2.1.1【BERT】Bert 是什么?
+    - 2.1.2【BERT】Bert 三个关键点？
+  - 2.2 Bert 输入输出表征篇
+    - 2.2.1 【BERT】Bert 输入输出表征长啥样？
+  - 2.3 【BERT】Bert 预训练篇
+    - 2.3.1 【BERT】Bert 预训练任务介绍
+    - 2.3.2 【BERT】Bert 预训练任务 之 Masked LM 篇
+      - 2.3.2.1 【BERT】 Bert 为什么需要预训练任务 Masked LM ？
+      - 2.3.2.2 【BERT】 Bert 预训练任务 Masked LM 怎么做？
+      - 2.3.2.3 【BERT】 Bert 预训练任务 Masked LM 存在问题？
+      - 2.3.2.4 【BERT】 预训练和微调之间的不匹配的解决方法？
+    - 2.3.3 【BERT】Bert 预训练任务 之 Next Sentence Prediction 篇
+      - 2.3.3.1 【BERT】Bert 为什么需要预训练任务 Next Sentence Prediction ？
+      - 2.3.3.2 【BERT】 Bert 预训练任务 Next Sentence Prediction 怎么做？
+  - 2.4 【BERT】 fine-turning 篇？
+    - 2.4.1 【BERT】为什么 Bert 需要 fine-turning？
+    - 2.4.2 【BERT】 Bert 如何 fine-turning？
+  - 2.5 【BERT】 Bert 损失函数篇？
+    - 2.5.1 【BERT】BERT的两个预训练任务对应的损失函数是什么(用公式形式展示)？
+- 三、 对比篇？
+  - 3.1 【对比】多义词问题是什么？
+  - 3.2 【对比】word2vec 为什么解决不了多义词问题？
+  - 3.3 【对比】GPT和BERT有什么不同？
+  - 3.4 【对比】为什么 elmo、GPT、Bert能够解决多义词问题？（以 elmo 为例）
 
 ##### 4.3.1 Bert 模型压缩 常见面试篇
 
